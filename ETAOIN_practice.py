@@ -1,9 +1,9 @@
-"""Map letters from string into dictionary & print bar chart of frequency."""
+""Map letters from string into dictionary & print bar chart of frequency."""
 import sys
 import pprint
 from collections import defaultdict
 
-# Note: text should be a short phrase for histogram to fit in IDLE window
+# Note: text should be a short phrase for bar chart to fit in IDLE window
 text = 'Like the castle in its corner in a medieval game, I foresee terrible \
 trouble and I stay here just the same.'
 
