@@ -1,4 +1,4 @@
-""Map letters from string into dictionary & print bar chart of frequency."""
+"""Map letters from string into dictionary & print bar chart of frequency."""
 import sys
 import pprint
 from collections import defaultdict
