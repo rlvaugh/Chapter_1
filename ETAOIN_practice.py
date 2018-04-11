@@ -1,29 +1,23 @@
-"""Map letters from string into dictionary & print histogram of frequency."""
-
+"""Map letters from string into dictionary & print bar chart of frequency."""
 import sys
 import pprint
 from collections import defaultdict
 
-# Note: text should be only a sentence or 2 for histogram to fit in IDLE window
+# Note: text should be a short phrase for histogram to fit in IDLE window
 text = 'Like the castle in its corner in a medieval game, I foresee terrible \
 trouble and I stay here just the same.'
 
 ALPHABET = 'abcdefghijklmnopqrstuvwxyz'
 
-# defaultdict module lets caller specify a default if a
-# value doesn't exist when the container is initialized
+# defaultdict module lets you build dictionary keys on the fly!
 mapped = defaultdict(list)
-
-for letter in ALPHABET:
-    for character in text:
-        if character.lower() == letter.lower():
-            mapped[letter].append(character)
+for character in text:
+    character = character.lower()
+    if character in ALPHABET:
+        mapped[character].append(character)
 
 # pprint lets you print stacked output
-print()
-print("You may need to stretch your console window if text wrapping occurs.\n")
+print("\nYou may need to stretch console window if text wrapping occurs.\n")
 print("text = ", end='')
-print("{}".format(text), file=sys.stderr)
-print()
+print("{}\n".format(text), file=sys.stderr)
 pprint.pprint(mapped, width=110)
-
